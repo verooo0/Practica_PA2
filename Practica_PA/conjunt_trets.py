@@ -29,12 +29,15 @@ class Cjt_trets:
 
     def esborrar_tret(self, n, p, cjt): 
         if p in self.__trets: 
-            self.__trets[p]._individus
-            if not self.__trets[p]._individus:
-                del self.__trets[p]
+            if n in slef.__trets[p].__individus:
+                self.__trets[p]._individus.remove(n)
+                if len(self.__trets[p]._individus) == 0:
+                    del self.__trets[p]
+                # else:
+                    # ll = list(self.__trets[p]._individus)
+                    # ll.sort()
             else:
-                ll = list(self.__trets[p]._individus)
-                ll.sort()
+                print("  error")
         else:
             print("  error")
     
@@ -44,11 +47,10 @@ class Cjt_trets:
             print(f"  {nom_tret}")
             for inv in self.__trets[nom_tret]._individus: #ordre?
                 print(f"Individu {inv} té el tret {nom_tret}")
-
         else:
             print("  error")
 
 
-    def distribucio_tret(self, nom_tret):
+    def distribucio_tret(self, nom_tret): #acabar
         count = len(self.__trets.get(nom_tret, []))
         print(f"{nom_tret}: {count}")
