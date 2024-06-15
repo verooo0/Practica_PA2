@@ -29,7 +29,7 @@ class Cjt_trets:
 
     def esborrar_tret(self, n, p, cjt): 
         if p in self.__trets: 
-            if n in slef.__trets[p].__individus:
+            if n in self.__trets[p].__individus:
                 self.__trets[p]._individus.remove(n)
                 if len(self.__trets[p]._individus) == 0:
                     del self.__trets[p]
