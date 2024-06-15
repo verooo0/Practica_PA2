@@ -12,6 +12,7 @@ class Cjt_individu:
         for _ in range(n):
             self.afegir_individu(item())
         self.__conjunt_individus = []
+        
 
     def consultar_individu(self,t):
         return self.__individus[t].escriure_ind()
@@ -44,12 +45,12 @@ class Cjt_individu:
         if arbre.buit(): 
             return None
         elif arbre.fulla():
-            if self.__conjunt_individus[arbre.valor_arrel()].consultar_tret(tret): #self.__conjunt_individus[arbre.valor_arrel()-1]??
+            if self.__conjunt_individus[arbre.valor_arrel()-1].consultar_tret(tret): #self.__conjunt_individus[arbre.valor_arrel()-1]??
                 return arbre
             else:
                 return None
             
-        elif self.__conjunt_individus[arbre.valor.arrel()].consultar_tret(tret):  #self.__conjunt_individus[arbre.valor_arrel()-1]??
+        elif self.__conjunt_individus[arbre.valor.arrel()-1].consultar_tret(tret):  #self.__conjunt_individus[arbre.valor_arrel()-1]??
             return ArbreBinari(arbre.valor_arrel(), self.__arbre_distribucio(arbre.fill_esq(),tret),self.__arbre_distribucio(arbre.fill_dre(),tret))
         else:
             res_esq = self. __arbre_distribucio(arbre.fill_esq(),tret)
