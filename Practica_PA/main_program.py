@@ -8,10 +8,11 @@ instruccio = item()
 while instruccio != 'fi':
     if instruccio == 'experiment':
         #print la instruccio aqui o dentro de las funciones(esto para todas las instrucciones)
-        numero_individu = int(item())
+        numero_individus = int(item())
         numero_cromosomes = int(item())
-        experiment_actual = Cjt_individu(numero_individu)
+        experiment_actual = Cjt_individu(numero_individus)
         trets_actuals = Cjt_trets()
+        print(f"experiment {numero_individus} {numero_cromosomes}")
         
 
     elif instruccio == 'afegir_tret':
@@ -20,25 +21,30 @@ while instruccio != 'fi':
 
         trets_actuals.afegir_tret(tret,individu, individu)
         experiment_actual.afegir_tret(tret,individu) #o llamar esta funcion dentro de la funcion de cjt_trets
+        print(f"afegir_tret {tret} {individu}")
     
     elif instruccio == 'treure_tret': # només grups 3 persones
         tret = item()
         individu = int(item())
-        cjt = item()
-        trets_actuals.esborrar_tret(individu, tret, cjt)
+        #cjt = item()  no se puede leer 3 cosas pq esta ya sera la siguiente instruccion
+        trets_actuals.esborrar_tret(individu, tret, cjt) #pq tiene tres inputs??
         experiment_actual.esborrar_tret(tret,individu)
+        print(f"treure_tret {tret} {individu}")
 
     elif instruccio == 'consulta_tret':
         nom_tret = item()
         trets_actuals.consulta_tret(nom_tret)
+        print(f"consulta_tret {nom_tret}")
         
     elif instruccio == 'consulta_individu':
-        n = int(item())
-        experiment_actual.consultar_individu(n)
+        individu = int(item())
+        experiment_actual.consultar_individu(individu)
+        print(f"consulta_individu {individu}")
 
     elif instruccio == 'distribucio_tret':
         nom_tret = item()
         trets_actuals.distribucio_tret(nom_tret)
+        print(f"distribucio_tret {nom_tret}")
 
 
     instruccio = item()
