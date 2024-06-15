@@ -5,14 +5,14 @@ class individu:
         self.__parcrom = Parcrom(crom)
         self.__trets = set()
     
-    def consultar_tret(self, a): 
-        return a in self.__trets
+    def consultar_tret(self, t): 
+        return t in self.__trets
     
-    def afegir_tret(self, a): 
-        self.__trets.add(a)
+    def afegir_tret(self, t): 
+        self.__trets.add(t)
     
-    def esborrar_tret(self, a): 
-        self.__trets.remove(a)
+    def esborrar_tret(self, t): 
+        self.__trets.remove(t)
 
     def cromosomes(self): 
         return self.__parcrom
