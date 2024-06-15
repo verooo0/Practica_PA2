@@ -36,7 +36,7 @@ class Cjt_individu:
     def distribucio(self, tr): 
         alpha = self.__arbre_distribucio(self.__arbre, tr)  #alpha = self.__arbre_nou(self.__arbre, s)
         print(' ', end = '')
-        self.__escriure_arbrebin(alpha)
+        self.__escriure_arbre(alpha)
 
 ## falten metodes privats 
 
@@ -44,12 +44,12 @@ class Cjt_individu:
         if arbre.buit(): 
             return None
         elif arbre.fulla():
-            if self.__conjunt_individus[arbre.valor_arrel()].te_tret(tret): #self.__conjunt_individus[arbre.valor_arrel()-1]??
+            if self.__conjunt_individus[arbre.valor_arrel()].consultar_tret(tret): #self.__conjunt_individus[arbre.valor_arrel()-1]??
                 return arbre
             else:
                 return None
             
-        elif self.__conjunt_individus[arbre.valor.arrel()].te_tret(tret):  #self.__conjunt_individus[arbre.valor_arrel()-1]??
+        elif self.__conjunt_individus[arbre.valor.arrel()].consultar_tret(tret):  #self.__conjunt_individus[arbre.valor_arrel()-1]??
             return ArbreBinari(arbre.valor_arrel(), self.__arbre_distribucio(arbre.fill_esq(),tret),self.__arbre_distribucio(arbre.fill_dre(),tret))
         else:
             res_esq = self. __arbre_distribucio(arbre.fill_esq(),tret)
