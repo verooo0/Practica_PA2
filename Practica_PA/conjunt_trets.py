@@ -35,11 +35,14 @@ class Cjt_trets:
             else:
                 ll = list(self.__trets[p]._individus)
                 ll.sort()
+        else:
+            print("  error")
     
 
     def consulta_tret(self, nom_tret):
         if nom_tret in self.__trets:
-            for inv in self.__trets[nom_tret]._individus:
+            print(f"  {nom_tret}")
+            for inv in self.__trets[nom_tret]._individus: #ordre?
                 print(f"Individu {inv} té el tret {nom_tret}")
 
         else:
