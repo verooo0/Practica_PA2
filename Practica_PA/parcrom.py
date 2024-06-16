@@ -1,4 +1,3 @@
-
 class Parcrom: 
 
     def __init__ (self, cromosomes=""):
@@ -27,10 +26,11 @@ class Parcrom:
             self.__cromosomes_sup = nou_superior
             self.__cromosomes_inf = nou_inferior
 
-    def __str__(self):
-        return f"  {self.__cromosomes_sup}\n  {self.__cromosomes_inf}"
-    
+    def reiniciar(self):
+        self.__num_cromosomes = 0
+        self.__cromosomes_sup = ""
+        self.__cromosomes_inf = ""
+
     def escriure_parcrom(self):
-        # Implementar la lógica para escribir el parcrom actual
         print(f"  {self.__cromosomes_sup}")
         print(f"  {self.__cromosomes_inf}")
