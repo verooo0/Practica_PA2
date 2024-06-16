@@ -1,0 +1,27 @@
+experiment 5 4
+3 1 4 0 0 2 0 0 5 0 0
+11111111
+00000000
+01010101
+10101010
+11001100
+
+consulta_tret qwerty_12
+
+afegir_tret qwerty_12 3
+consulta_tret qwerty_12
+
+afegir_tret qwerty_12 2
+afegir_tret qwerty_12 1
+consulta_tret qwerty_12
+
+treure_tret qwerty_12 1
+afegir_tret qwerty_12 5
+consulta_tret qwerty_12
+
+treure_tret qwerty_12 3
+treure_tret qwerty_12 2
+treure_tret qwerty_12 5
+consulta_tret qwerty_12
+
+fi
