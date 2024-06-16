@@ -40,3 +40,26 @@ class Cjt_trets:
                     for ind_num in self.__trets[p]._individus:
                         individu_obj = self.__conjunt_individus.obtenir_individu(ind_num)
                         self.__trets[p]._parcrom.interseccio_tret(individu_obj.cromosomes())
+
+    def consulta_tret(self, nom_tret):
+        if not nom_tret in self.__trets:
+            print("  error")
+        else:
+            print(f"  {nom_tret}")
+            self.__trets[nom_tret]._parcrom.escriure_parcrom()
+            individus = sorted(self.__trets[nom_tret]._individus)
+            for a in individus:
+                print(f"  {a}")
+
+    def distribucio_tret(self, tret):
+        if not tret in self.__trets:
+            print("  error")
+        else:
+            inordre = self.__conjunt_individus.distribucio(tret)
+            print(end=" ")
+            for i in inordre:
+                print(f" {i}", end="")
+            print()
+
+                        individu_obj = self.__conjunt_individus.obtenir_individu(ind_num)
+                        self.__trets[p]._parcrom.interseccio_tret(individu_obj.cromosomes())
