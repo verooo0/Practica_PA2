@@ -122,5 +122,43 @@ distribucio_tret asdf_34
 afegir_tret jeje 8
 consulta_individu 8
 distribucio_tret jeje
-fi
 
+experiment 3 1
+2 1 0 0 3 0 0
+
+1
+0 
+1
+
+consulta_individu 2
+consulta_individu 3
+consulta_individu 
+
+
+
+1
+
+consulta_tret 
+
+	hola
+distribucio_tret hola
+afegir_tret hola 3
+consulta_tret hola
+
+afegir_tret hola 2
+distribucio_tret hola
+afegir_tret asd 2
+afegir_tret qwe 1
+
+consulta_individu 2
+consulta_individu 3
+consulta_individu 
+
+
+
+1
+distrubicio_tret asd
+consulta_tret asd
+
+
+fi
