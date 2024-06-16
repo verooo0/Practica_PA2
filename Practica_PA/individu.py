@@ -18,9 +18,6 @@ class individu:
     def cromosomes(self): 
         return self.__parcrom
     
-    def llegir_individu(self, n): 
-        self.__parcrom.llegir_cromosoma(n)
-    
     def crom(self): 
         return self.__cromosomes
 
