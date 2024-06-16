@@ -61,5 +61,3 @@ class Cjt_trets:
                 print(f" {i}", end="")
             print()
 
-                        #individu_obj = self.__conjunt_individus.obtenir_individu(ind_num)
-                        #self.__trets[p]._parcrom.interseccio_tret(individu_obj.cromosomes())
