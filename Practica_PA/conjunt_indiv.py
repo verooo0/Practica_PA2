@@ -43,20 +43,21 @@ class Cjt_individu:
             return ArbreBinari()
         
     def __arbre_distribucio(self, arbre, tret):
-        if arbre.buit(): 
+        if arbre.buit():
             return None
-        elif arbre.fulla():
-            if self.__individus[arbre.valor_arrel()].consultar_tret(tret): #self.__conjunt_individus[arbre.valor_arrel()-1]??
-                return arbre
-            else:
-                return None
             
-        elif self.__individus[arbre.valor_arrel()].consultar_tret(tret):  #self.__conjunt_individus[arbre.valor_arrel()-1]??
-            return ArbreBinari(arbre.valor_arrel(), self.__arbre_distribucio(arbre.fill_esq(),tret),self.__arbre_distribucio(arbre.fill_dre(),tret))
+        # Mira recursivamente los hijos izquierdo y derecho
+        esq_subArbre = self.__arbre_distribucio(arbre.fill_esq(), tret)
+        dre_subArbre = self.__arbre_distribucio(arbre.fill_dre(), tret)
+
+        te_tret = self.__individus[arbre.valor_arrel()].consultar_tret(tret)
+
+        if te_tret:
+            # si te tret, construeix arbre amb els dos fills
+            return ArbreBinari(arbre.valor_arrel(), esq_subArbre, dre_subArbre)
         else:
-            res_esq = self. __arbre_distribucio(arbre.fill_esq(),tret)
-            res_dre = self.__arbre_distribucio(arbre.fill_dre(),tret)
-            if res_esq == res_dre == None:
-                return None
+            # Sino, marcar arrel amb un valor negatiu si algun fills te tret o return None si no es el cas.
+            if esq_subArbre or dre_subArbre:
+                return ArbreBinari(-arbre.valor_arrel(), esq_subArbre, dre_subArbre)
             else:
-                return ArbreBinari(-(arbre.valor_arrel()), res_esq, res_dre)
+                return None
