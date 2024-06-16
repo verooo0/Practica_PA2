@@ -36,12 +36,12 @@ while instruccio != 'fi':   #mentres instrucció no sigui fi
         if n < 1 or n > numero_individu:             #si l'individu no existeix dona error 
             print(" error")
         else:                                        
-            experiment_actual.consultar_individu(n)            #si l'individu existeix crida la funció consultar_individu de la classe cjt_individu
+            experiment_actual.consultar_individu(n)            #si l'individu existeix crida al métode consultar_individu de la classe cjt_individu
 
     elif instruccio == 'distribucio_tret':
         nom_tret = item()
         print(f"distribucio_tret {nom_tret}")
-        trets_actuals.distribucio_tret(nom_tret)             #cridar funció distribucio_tret de classe conjunts_trets
+        trets_actuals.distribucio_tret(nom_tret)             #cridar al métode distribucio_tret de classe conjunts_trets
 
     instruccio = item()
     
