@@ -16,19 +16,19 @@ while instruccio != 'fi':   #mentres instrucció no sigui fi
         individu_num = int(item())
         print(f"afegir_tret {tret} {individu_num}")
         individu = experiment_actual.obtenir_individu(individu_num)    #assignar a individu la informació de l'individu( número cromosomes) des de la classe cjt_individu
-        trets_actuals.afegir_tret(tret, individu, individu_num)        #cridar funcio afegir_tret de classe conjunts_trets
+        trets_actuals.afegir_tret(tret, individu, individu_num)        #cridar al métode afegir_tret de classe conjunts_trets
     
     elif instruccio == 'treure_tret':
         tret = item()
         individu_num = int(item())
         individu = experiment_actual.obtenir_individu(individu_num)  #assignar a individu la informació de l'individu( número cromosomes) des de la classe cjt_individu
         print(f"treure_tret {tret} {individu_num}")
-        trets_actuals.esborrar_tret(tret, individu_num, individu)     #cridar funcio esborrar_tret de classe conjunts_trets
+        trets_actuals.esborrar_tret(tret, individu_num, individu)     #cridar al métode esborrar_tret de classe conjunts_trets
 
     elif instruccio == 'consulta_tret':
         nom_tret = item()
         print(f"consulta_tret {nom_tret}")                
-        trets_actuals.consulta_tret(nom_tret)            #cridar funcio consulta_tret de classe conjunts_trets
+        trets_actuals.consulta_tret(nom_tret)            #cridar al métode consulta_tret de classe conjunts_trets
         
     elif instruccio == 'consulta_individu':
         n = int(item())
