@@ -8,22 +8,22 @@ class Cjt_individu:
         self.__individus = [None]                    #crear llista amb None per a que el número de l'individu coincideix-hi amb la seva posició a la llista
         self.__arbre = self.__llegir_arbre()         #llegir l'arbre en preorde i marca 0
         for _ in range(n):
-            self.afegir_individu(item())             #cridar a la funcio afegir_individu amb els cromosomes com input
+            self.afegir_individu(item())             #cridar al métode afegir_individu amb els cromosomes com input
     
     def consultar_individu(self, ind):
-        return self.__individus[ind].escriure_ind()
+        return self.__individus[ind].escriure_ind()     #crida al métode escriure_ind de la classe individu 
     
     def afegir_individu(self, cromosomes):
-        self.__individus.append(individu(cromosomes))
+        self.__individus.append(individu(cromosomes))    #afageix a la llista d'individus la informació d'aquest( número y cromosomes) que s'ha obtingut després d'inicialitzar la classe individu
     
     def afegir_tret(self, t, n):
-        self.__individus[n].afegir_tret(t)
+        self.__individus[n].afegir_tret(t)              #crida al métode afegir_tret de la classe individu 
 
     def esborrar_tret(self, t, n): 
-        self.__individus[n].esborrar_tret(t) 
+        self.__individus[n].esborrar_tret(t)             #crida al métode esborrar_tret de la classe individu
 
     def distribucio(self, tr): 
-        alpha = self.__arbre_distribucio(self.__arbre, tr)  
+        alpha = self.__arbre_distribucio(self.__arbre, tr)      #
         if alpha is None: 
             return []
         else: 
