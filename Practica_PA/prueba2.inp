@@ -1,0 +1,126 @@
+experiment 7 8
+4 1 6 0 0 2 0 0 5 3 0 0 7 0 0
+1111111111111111
+0000000011111111
+0101010100001111
+1010101010101010
+1100110010101010
+0010101011010010
+1110110100101100
+
+consulta_individu 1
+
+consulta_individu 2
+consulta_individu 3
+consulta_individu 
+
+
+
+4
+consulta_individu 5
+consulta_tret 
+
+	hola
+distribucio_tret hola
+afegir_tret hola 4
+consulta_tret hola
+distribucio_tret hola
+treure_tret 
+
+
+	hola 
+	
+	
+  2
+afegir_tret hola 6
+consulta_individu 4
+treure_tret hola 3
+consulta_individu 2
+consulta_tret hola
+afegir_tret asdf_34 7
+distribucio_tret asdf_34
+consulta_tret asdf_34
+afegir_tret asdf_34 2
+distribucio_tret asdf_34
+consulta_tret asdf_34
+afegir_tret asdf_34 1
+distribucio_tret asdf_34
+consulta_tret asdf_34
+afegir_tret zxcv_13 5
+distribucio_tret zxcv_13
+afegir_tret asdf_34 3
+distribucio_tret asdf_34
+consulta_individu 3
+afegir_tret asdf_31 5
+consulta_individu 5
+
+
+experiment 10 10
+4 1 6 9 0 0 8 0 0 2 10 0 0 0 5 3 0 0 7 0 0
+11111111111111111010
+00000000111111110001
+01010101000011110101
+10101010101010101101
+11001100101010101110
+00101010110100100100
+11101101001011000010
+01010101020101010100
+01011000100010101010
+01010101010110010010
+
+consulta_individu 1
+
+consulta_individu 2
+consulta_individu 3
+consulta_individu 
+
+
+
+4
+consulta_individu 5
+consulta_tret 
+
+	hola
+distribucio_tret hola
+afegir_tret hola 4
+consulta_tret hola
+distribucio_tret hola
+treure_tret 
+
+
+	hola 
+	
+	
+  2
+afegir_tret hola 6
+consulta_individu 4
+treure_tret hola 3
+consulta_individu 2
+consulta_tret hola
+afegir_tret asdf_34 7
+distribucio_tret asdf_34
+consulta_tret asdf_34
+afegir_tret asdf_34 2
+distribucio_tret asdf_34
+consulta_tret asdf_34
+afegir_tret asdf_34 1
+distribucio_tret asdf_34
+consulta_tret asdf_34
+afegir_tret zxcv_13 5
+distribucio_tret zxcv_13
+afegir_tret asdf_34 3
+distribucio_tret asdf_34
+consulta_individu 3
+afegir_tret asdf_31 5
+consulta_individu 5
+afegir_tret jeje 10
+afegir_tret jeje 9
+consulta_tret jeje
+afegir_tret asdf_34 8
+distribucio_tret asdf_34
+
+afegir_tret jeje 8
+consulta_individu 8
+distribucio_tret jeje
+fi
+
