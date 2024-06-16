@@ -1,20 +1,20 @@
 class Parcrom: 
 
-    def __init__(self, cromosomes=""):
+    def __init__(self, cromosomes=""): # 
         self.__num_cromosomes = len(cromosomes) // 2
         self.__cromosomes_sup = cromosomes[:self.__num_cromosomes]
         self.__cromosomes_inf = cromosomes[self.__num_cromosomes:]
 
-    def num_cromosomes(self):
+    def num_cromosomes(self): # Retorna el nombre de parells de cromosomes
         return self.__num_cromosomes
 
-    def cromosomes_sup(self):
+    def cromosomes_sup(self): # Retorna la meitat superior dels cromosomes.
         return self.__cromosomes_sup
 
-    def cromosomes_inf(self):
+    def cromosomes_inf(self): # Retorna la meitat inferior dels cromosomes.
         return self.__cromosomes_inf
 
-    def interseccio_tret(self, nou_parell):
+    def interseccio_tret(self, nou_parell): #
         if  self.__num_cromosomes == 0:
             self.__num_cromosomes = nou_parell.num_cromosomes()
             self.__cromosomes_sup = nou_parell.cromosomes_sup()
@@ -32,11 +32,11 @@ class Parcrom:
             self.__cromosomes_sup = ''.join(nou_superior)
             self.__cromosomes_inf = ''.join(nou_inferior)
 
-    def reiniciar(self):
+    def reiniciar(self): # Restableix les dades del cromosoma a un estat buit.
         self.__num_cromosomes = 0
         self.__cromosomes_sup = ""
         self.__cromosomes_inf = ""
 
-    def escriure_parcrom(self):
+    def escriure_parcrom(self): # Imprimeix l'estat actual del parells de cromosomes.
         print(f"  {self.__cromosomes_sup}")
         print(f"  {self.__cromosomes_inf}")
