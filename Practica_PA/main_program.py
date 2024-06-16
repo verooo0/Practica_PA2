@@ -49,6 +49,6 @@ print("fi")
         
 
 
-    instruccio = item()
+    #instruccio = item()
     
-print("fi")
+#print("fi")
