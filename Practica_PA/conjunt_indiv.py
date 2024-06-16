@@ -35,22 +35,23 @@ class Cjt_individu:
         
     def __llegir_arbre(self, marca = 0):
         x = int(item())
-        if x != marca:
-            l = self.__llegir_arbre(marca)
+        if x != marca:                                            #si el número no és la marca (0) fa recursiva amb els dos següents números i retorna l'arbre binari amb els nodes
+            l = self.__llegir_arbre(marca) 
             r = self.__llegir_arbre(marca)
             return ArbreBinari(x, l, r)
-        else:
-            return ArbreBinari()
+        else:                                                     #si el número és la marca retorna l'arbre binari buit
+            return ArbreBinari()    
         
     def __arbre_distribucio(self, arbre, tret):
-        if arbre.buit():
+        if arbre.buit():                                        #si l'arbre es buit retorna None
             return None
             
-        # Mira recursivamente los hijos izquierdo y derecho
-        esq_subArbre = self.__arbre_distribucio(arbre.fill_esq(), tret)
+        # Mira recursivament els fills esquerra i dreta de l'arrel
+        
+        esq_subArbre = self.__arbre_distribucio(arbre.fill_esq(), tret)        
         dre_subArbre = self.__arbre_distribucio(arbre.fill_dre(), tret)
 
-        te_tret = self.__individus[arbre.valor_arrel()].consultar_tret(tret)
+        te_tret = self.__individus[arbre.valor_arrel()].consultar_tret(tret)        #crida al mètode consultar_tret per saber si l'individu té el tret
 
         if te_tret:
             # si te tret, construeix arbre amb els dos fills
