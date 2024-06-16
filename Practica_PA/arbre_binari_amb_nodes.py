@@ -104,19 +104,6 @@ class ArbreBinari:
             return False
         return self._root._left is None and self._root._right is None
 
-    def __eq__(self,b):
-        # Pre: b és un ArbreBinari
-        def eq_aux(a,b):
-            if a is None:
-                return b is None
-            elif b is None:
-                return False
-            else:
-                if a._element != b._element:
-                    return False
-                else:
-                    return eq_aux(a._left,b._left) and eq_aux(a._right, b._right)
-        return eq_aux(self._root,b._root)
 
     def __str__(self):   # Escriure l'arbre com a string, amb 0 com a marca
         if not self.buit():
