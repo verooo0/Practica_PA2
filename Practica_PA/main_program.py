@@ -6,9 +6,9 @@ instruccio = item()
 while instruccio != 'fi':   #mentres instrucció no sigui fi
     if instruccio == 'experiment':
         numero_individu = int(item())
+        numero_cromosomes = int(item())   
         experiment_actual = Cjt_individu(numero_individu)     #inicialitzar conjunt_individu
-        trets_actuals = Cjt_trets(experiment_actual)          #inicialitzar conjunt_trets
-        numero_cromosomes = int(item())                       
+        trets_actuals = Cjt_trets(experiment_actual)          #inicialitzar conjunt_trets         
         print(f"experiment {numero_individu} {numero_cromosomes}")
 
     elif instruccio == 'afegir_tret':
