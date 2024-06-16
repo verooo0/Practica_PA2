@@ -5,13 +5,13 @@ item = pytokr()
 
 class Cjt_individu:
     def __init__(self, n):
-        self.__individus = [None]
-        self.__arbre = self.__llegir_arbre()
+        self.__individus = [None]                    #crear llista amb None per a que el número de l'individu coincideix-hi amb la seva posició a la llista
+        self.__arbre = self.__llegir_arbre()         #llegir l'arbre en preorde i marca 0
         for _ in range(n):
-            self.afegir_individu(item())
+            self.afegir_individu(item())             #cridar a la funcio afegir_individu amb els cromosomes com input
     
-    def consultar_individu(self, t):
-        return self.__individus[t].escriure_ind()
+    def consultar_individu(self, ind):
+        return self.__individus[ind].escriure_ind()
     
     def afegir_individu(self, cromosomes):
         self.__individus.append(individu(cromosomes))
