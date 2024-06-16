@@ -15,25 +15,22 @@ class Parcrom:
         return self.__cromosomes_inf
 
     def interseccio_tret(self, nou_parell):
-        if self.__num_cromosomes == 0:
+        if  self.__num_cromosomes == 0:
             self.__num_cromosomes = nou_parell.get_num_cromosomes()
             self.__cromosomes_sup = nou_parell.get_cromosomes_sup()
             self.__cromosomes_inf = nou_parell.get_cromosomes_inf()
         else:
-            nou_superior = ""
-            nou_inferior = ""
+            nou_superior = []
+            nou_inferior = []
             for i in range(self.__num_cromosomes):
-                if self.__cromosomes_sup[i] != nou_parell.get_cromosomes_sup()[i]:
-                    nou_superior += "-"
-                    nou_inferior += "-"
-                elif self.__cromosomes_inf[i] != nou_parell.get_cromosomes_inf()[i]:
-                    nou_superior += "-"
-                    nou_inferior += "-"
+                if self.__cromosomes_sup[i] != nou_parell.get_cromosomes_sup()[i] or self.__cromosomes_inf[i] != nou_parell.get_cromosomes_inf()[i]:
+                    nou_superior.append("-")
+                    nou_inferior.append("-")
                 else:
-                    nou_superior += self.__cromosomes_sup[i]
-                    nou_inferior += self.__cromosomes_inf[i]
-            self.__cromosomes_sup = nou_superior
-            self.__cromosomes_inf = nou_inferior
+                    nou_superior.append(self.__cromosomes_sup[i])
+                    nou_inferior.append(self.__cromosomes_inf[i])
+            self.__cromosomes_sup = ''.join(nou_superior)
+            self.__cromosomes_inf = ''.join(nou_inferior)
 
     def reiniciar(self):
         self.__num_cromosomes = 0
