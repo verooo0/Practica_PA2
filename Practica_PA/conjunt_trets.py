@@ -30,7 +30,7 @@ class Cjt_trets:
         else:                                                       # Si el tret existeix
             if not n in self.__trets[t]._individus:                     # Si l'individu no té el tret error
                 print("  error")
-            else:                                                        # Si l'individuo té el tret s'elimina el tret
+            else:                                                        # Si l'individu té el tret s'elimina el tret
                 self.__trets[t]._individus.remove(n)                      #s'elimina el tret de l'individu
                 ind.esborrar_tret(t)                                      #crida al mètode esborrar_tret de la classe individu
                 if len(self.__trets[t]._individus) == 0:                  #si cap individu té el tret s'elimina el tret del diccionari
